@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const prefix = "/renout-studio-site";
+const prefix = "/renout-studio";
 const files = ["dist/client/index.html", "dist/client/404.html"];
 
 for (const file of files) {

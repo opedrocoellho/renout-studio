@@ -36,7 +36,7 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /renout-studio-site
+          NEXT_PUBLIC_BASE_PATH: /renout-studio
 
       - name: Prepare repository paths
         run: node scripts/prepare-github-pages.mjs

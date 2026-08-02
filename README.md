@@ -8,6 +8,8 @@ O projeto foi desenvolvido para apresentar a marca, os serviços e a experiênci
 
 [renout-studio-bh.cibelebarbosa8821.chatgpt.site](https://renout-studio-bh.cibelebarbosa8821.chatgpt.site)
 
+[opedrocoellho.github.io/renout-studio](https://opedrocoellho.github.io/renout-studio/)
+
 ## Principais recursos
 
 - Apresentação visual da Renout Studio
