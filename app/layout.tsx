@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Renout Studio | Barbearia em Belo Horizonte",
     description: "Cortes com precisão. Estilo com identidade.",
-    images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "Renout Studio" }],
+    images: [{ url: "/og-v3.png", width: 1200, height: 630, alt: "Renout Studio" }],
     locale: "pt_BR",
     type: "website",
   },
-  twitter: { card: "summary_large_image", images: ["/og-v2.png"] },
+  twitter: { card: "summary_large_image", images: ["/og-v3.png"] },
   icons: { icon: "/images/logo-transparent.png", shortcut: "/images/logo-transparent.png" },
 };
 
