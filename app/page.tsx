@@ -6,6 +6,14 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const whatsapp = "https://wa.me/5531972231112?text=Olá%2C%20Renout%20Studio!%20Gostaria%20de%20agendar%20um%20horário.";
 const reviews = "https://www.google.com/search?q=Renout+Studio+barbearia+Belo+Horizonte+avaliações";
 
+function ArrowIcon() {
+  return (
+    <svg className="arrow-icon" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M4 12 12 4M6 4h6v6" />
+    </svg>
+  );
+}
+
 const services = [
   { name: "Corte", price: "R$ 65", image: `${basePath}/images/corte-1.png`, copy: "Precisão, estilo e acabamento para valorizar a sua identidade." },
   { name: "Corte máquina", price: "R$ 50", image: `${basePath}/images/corte-2.png`, copy: "Linhas limpas e um resultado impecável, do clássico ao contemporâneo." },
@@ -33,7 +41,7 @@ export default function Home() {
             <a href="#avaliacoes">Avaliações</a>
             <a href="#contato">Contato</a>
           </nav>
-          <a className="header-cta" href={whatsapp} target="_blank" rel="noreferrer">Agendar <span>↗</span></a>
+          <a className="header-cta" href={whatsapp} target="_blank" rel="noreferrer">Agendar <ArrowIcon /></a>
         </header>
 
         <div className="hero-content">
@@ -41,7 +49,7 @@ export default function Home() {
           <h1>Seu estilo,<br /><em>bem cuidado.</em></h1>
           <p>Precisão em cada detalhe. Uma experiência particular, moderna e feita no seu tempo.</p>
           <div className="hero-actions">
-            <a className="button button-light" href={whatsapp} target="_blank" rel="noreferrer">Agendar pelo WhatsApp <span>↗</span></a>
+            <a className="button button-light" href={whatsapp} target="_blank" rel="noreferrer">Agendar pelo WhatsApp <ArrowIcon /></a>
           </div>
         </div>
         <div className="slide-index"><b>01</b><span /><small>03</small></div>
@@ -62,7 +70,7 @@ export default function Home() {
             <div><b>02</b><span>Hora marcada</span></div>
             <div><b>03</b><span>Técnica e acabamento</span></div>
           </div>
-          <a className="underlined" href={whatsapp} target="_blank" rel="noreferrer">Viva a experiência Renout <span>↗</span></a>
+          <a className="underlined" href={whatsapp} target="_blank" rel="noreferrer">Viva a experiência Renout <ArrowIcon /></a>
         </div>
         <div className="experience-visual">
           <div className="photo-main"><img src={`${basePath}/images/hero.png`} alt="Atendimento cuidadoso no Renout Studio" /></div>
@@ -83,14 +91,14 @@ export default function Home() {
               <div className="service-overlay" />
               <span className="card-number">0{index + 1}</span>
               <div className="card-copy"><h3>{service.name}</h3><p>{service.copy}</p></div>
-              <div className="card-footer"><strong>{service.price}</strong><span>↗</span></div>
+              <div className="card-footer"><strong>{service.price}</strong><ArrowIcon /></div>
             </a>
           ))}
         </div>
         <div className="service-table">
           <div><span>Acabamento</span><b>R$ 20</b></div>
           <div><span>Hidratação</span><b>R$ 50</b></div>
-          <div><span>Todos os serviços</span><a href={whatsapp} target="_blank" rel="noreferrer">Consultar e agendar ↗</a></div>
+          <div><span>Todos os serviços</span><a href={whatsapp} target="_blank" rel="noreferrer">Consultar e agendar <ArrowIcon /></a></div>
         </div>
       </section>
 
@@ -99,7 +107,7 @@ export default function Home() {
           <p className="eyebrow">Reputação</p>
           <h2>Quem senta na cadeira,<br /><em>conta a experiência.</em></h2>
           <p>As avaliações ajudam novos clientes a escolher com confiança e mostram o cuidado que existe em cada atendimento.</p>
-          <a className="button button-dark" href={reviews} target="_blank" rel="noreferrer">Ver avaliações no Google <span>↗</span></a>
+          <a className="button button-dark" href={reviews} target="_blank" rel="noreferrer">Ver avaliações no Google <ArrowIcon /></a>
         </div>
         <ReviewsCarousel />
       </section>
@@ -124,19 +132,19 @@ export default function Home() {
           <p className="eyebrow">Visite o studio</p>
           <h2>Um espaço reservado para o seu momento.</h2>
           <div className="address"><p>Av. Cristiano Machado, 1648 — Sala 506</p><p>Cidade Nova · Belo Horizonte, MG</p></div>
-          <a className="button button-dark" href={whatsapp} target="_blank" rel="noreferrer">Agendar agora <span>↗</span></a>
-          <a className="underlined" href="https://www.google.com/maps/search/?api=1&query=Av.%20Cristiano%20Machado%2C%201648%20Belo%20Horizonte" target="_blank" rel="noreferrer">Abrir no mapa ↗</a>
+          <a className="button button-dark" href={whatsapp} target="_blank" rel="noreferrer">Agendar agora <ArrowIcon /></a>
+          <a className="underlined" href="https://www.google.com/maps/search/?api=1&query=Av.%20Cristiano%20Machado%2C%201648%20Belo%20Horizonte" target="_blank" rel="noreferrer">Abrir no mapa <ArrowIcon /></a>
         </div>
       </section>
 
       <footer>
         <div className="footer-brand"><img src={`${basePath}/images/logo-transparent.png`} alt="Renout Studio" /><p>Cortes com precisão.<br />Estilo com identidade.</p></div>
         <div><small>Navegue</small><a href="#experiencia">Experiência</a><a href="#servicos">Serviços</a><a href="#avaliacoes">Avaliações</a></div>
-        <div><small>Conecte-se</small><a href="https://www.instagram.com/renoutstudio/" target="_blank" rel="noreferrer">Instagram ↗</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp ↗</a></div>
+        <div><small>Conecte-se</small><a href="https://www.instagram.com/renoutstudio/" target="_blank" rel="noreferrer">Instagram <ArrowIcon /></a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp <ArrowIcon /></a></div>
         <div><small>Encontre</small><p>Av. Cristiano Machado, 1648<br />Sala 506 · Cidade Nova, BH</p></div>
         <p className="copyright">© {new Date().getFullYear()} Renout Studio</p>
       </footer>
-      <a className="mobile-cta" href={whatsapp} target="_blank" rel="noreferrer">Agendar pelo WhatsApp <span>↗</span></a>
+      <a className="mobile-cta" href={whatsapp} target="_blank" rel="noreferrer">Agendar pelo WhatsApp <ArrowIcon /></a>
     </main>
   );
 }

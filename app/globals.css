@@ -16,3 +16,7 @@
 .service-card>img{opacity:.24;filter:saturate(.38) brightness(.68);transform:scale(1.04)}
 .service-card:hover>img{opacity:.9;filter:saturate(.82) brightness(.78);transform:scale(1)}
 @media(max-width:600px){.service-card>img{opacity:.72;filter:saturate(.65) brightness(.7)}}
+
+/* Vector arrow prevents mobile browsers from substituting an emoji glyph. */
+.arrow-icon{width:1em;height:1em;flex:0 0 auto;display:inline-block;vertical-align:-.12em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+a:not(.button):not(.header-cta):not(.mobile-cta)>.arrow-icon{margin-left:.3em}
