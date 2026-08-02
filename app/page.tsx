@@ -42,7 +42,6 @@ export default function Home() {
           <p>Precisão em cada detalhe. Uma experiência particular, moderna e feita no seu tempo.</p>
           <div className="hero-actions">
             <a className="button button-light" href={whatsapp} target="_blank" rel="noreferrer">Agendar pelo WhatsApp <span>↗</span></a>
-            <a className="circle-link" href="#experiencia" aria-label="Conheça o studio"><span>↓</span></a>
           </div>
         </div>
         <div className="slide-index"><b>01</b><span /><small>03</small></div>
