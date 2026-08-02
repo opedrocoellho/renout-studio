@@ -15,7 +15,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Renout Studio — início">
-          <img src="/images/logo.png" alt="Renout Studio" />
+          <img src="/images/logo-transparent.png" alt="Renout Studio" />
         </a>
         <nav aria-label="Navegação principal">
           <a href="#servicos">Serviços</a>
@@ -113,7 +113,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <img src="/images/logo.png" alt="Renout Studio" />
+        <img src="/images/logo-transparent.png" alt="Renout Studio" />
         <p>Cortes com precisão. Estilo com identidade.</p>
         <div className="footer-links">
           <a href="https://www.instagram.com/renoutstudio/" target="_blank" rel="noreferrer">Instagram ↗</a>

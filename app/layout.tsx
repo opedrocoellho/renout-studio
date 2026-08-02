@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"] });
+const sans = DM_Sans({ variable: "--font-sans", subsets: ["latin"] });
+const display = Playfair_Display({ variable: "--font-display", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://renout-studio.pages.dev"),
@@ -11,18 +12,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Renout Studio | Barbearia em Belo Horizonte",
     description: "Cortes com precisão. Estilo com identidade.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Renout Studio" }],
+    images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "Renout Studio" }],
     locale: "pt_BR",
     type: "website",
   },
-  twitter: { card: "summary_large_image", images: ["/og.png"] },
-  icons: { icon: "/images/logo.png", shortcut: "/images/logo.png" },
+  twitter: { card: "summary_large_image", images: ["/og-v2.png"] },
+  icons: { icon: "/images/logo-transparent.png", shortcut: "/images/logo-transparent.png" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body className={manrope.variable}>{children}</body>
+      <body className={`${sans.variable} ${display.variable}`}>{children}</body>
     </html>
   );
 }
