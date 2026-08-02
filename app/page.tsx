@@ -1,3 +1,5 @@
+import { ReviewsCarousel } from "./ReviewsCarousel";
+
 const whatsapp = "https://wa.me/5531972231112?text=Olá%2C%20Renout%20Studio!%20Gostaria%20de%20agendar%20um%20horário.";
 const reviews = "https://www.google.com/search?q=Renout+Studio+barbearia+Belo+Horizonte+avaliações";
 
@@ -97,12 +99,7 @@ export default function Home() {
           <p>As avaliações ajudam novos clientes a escolher com confiança e mostram o cuidado que existe em cada atendimento.</p>
           <a className="button button-dark" href={reviews} target="_blank" rel="noreferrer">Ver avaliações no Google <span>↗</span></a>
         </div>
-        <div className="review-stage">
-          <div className="review-stars" aria-label="Cinco estrelas">★★★★★</div>
-          <blockquote>“Conheça as experiências compartilhadas por quem já passou pelo Renout Studio.”</blockquote>
-          <div className="review-meta"><span>Google Reviews</span><span>Avaliações públicas e verificáveis</span></div>
-          <div className="review-controls"><button aria-label="Avaliação anterior">←</button><button aria-label="Próxima avaliação">→</button></div>
-        </div>
+        <ReviewsCarousel />
       </section>
 
       <section className="app-banner">
