@@ -1,13 +1,16 @@
 import { ReviewsCarousel } from "./ReviewsCarousel";
 
+export const dynamic = "force-static";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const whatsapp = "https://wa.me/5531972231112?text=Olá%2C%20Renout%20Studio!%20Gostaria%20de%20agendar%20um%20horário.";
 const reviews = "https://www.google.com/search?q=Renout+Studio+barbearia+Belo+Horizonte+avaliações";
 
 const services = [
-  { name: "Corte", price: "R$ 65", image: "/images/corte-1.png", copy: "Precisão, estilo e acabamento para valorizar a sua identidade." },
-  { name: "Corte máquina", price: "R$ 50", image: "/images/corte-2.png", copy: "Linhas limpas e um resultado impecável, do clássico ao contemporâneo." },
-  { name: "Textura", price: "R$ 60", image: "/images/hero.png", copy: "Forma, movimento e personalidade para transformar o visual." },
-  { name: "Selagem", price: "R$ 90", image: "/images/ambiente.png", copy: "Cuidado técnico para fios alinhados, saudáveis e com presença." },
+  { name: "Corte", price: "R$ 65", image: `${basePath}/images/corte-1.png`, copy: "Precisão, estilo e acabamento para valorizar a sua identidade." },
+  { name: "Corte máquina", price: "R$ 50", image: `${basePath}/images/corte-2.png`, copy: "Linhas limpas e um resultado impecável, do clássico ao contemporâneo." },
+  { name: "Textura", price: "R$ 60", image: `${basePath}/images/hero.png`, copy: "Forma, movimento e personalidade para transformar o visual." },
+  { name: "Selagem", price: "R$ 90", image: `${basePath}/images/ambiente.png`, copy: "Cuidado técnico para fios alinhados, saudáveis e com presença." },
 ];
 
 export default function Home() {
@@ -15,14 +18,14 @@ export default function Home() {
     <main>
       <section className="hero" id="inicio">
         <div className="hero-slides" aria-hidden="true">
-          <img className="hero-slide slide-one" src="/images/corte-1.png" alt="" />
-          <img className="hero-slide slide-two" src="/images/corte-2.png" alt="" />
-          <img className="hero-slide slide-three" src="/images/hero.png" alt="" />
+          <img className="hero-slide slide-one" src={`${basePath}/images/corte-1.png`} alt="" />
+          <img className="hero-slide slide-two" src={`${basePath}/images/corte-2.png`} alt="" />
+          <img className="hero-slide slide-three" src={`${basePath}/images/hero.png`} alt="" />
         </div>
         <div className="hero-shade" />
         <header className="site-header">
           <a className="brand" href="#inicio" aria-label="Renout Studio — início">
-            <img src="/images/logo-transparent.png" alt="Renout Studio" />
+            <img src={`${basePath}/images/logo-transparent.png`} alt="Renout Studio" />
           </a>
           <nav aria-label="Navegação principal">
             <a href="#experiencia">Experiência</a>
@@ -63,8 +66,8 @@ export default function Home() {
           <a className="underlined" href={whatsapp} target="_blank" rel="noreferrer">Viva a experiência Renout <span>↗</span></a>
         </div>
         <div className="experience-visual">
-          <div className="photo-main"><img src="/images/hero.png" alt="Atendimento cuidadoso no Renout Studio" /></div>
-          <div className="photo-float"><img src="/images/ambiente.png" alt="Interior do Renout Studio" /></div>
+          <div className="photo-main"><img src={`${basePath}/images/hero.png`} alt="Atendimento cuidadoso no Renout Studio" /></div>
+          <div className="photo-float"><img src={`${basePath}/images/ambiente.png`} alt="Interior do Renout Studio" /></div>
           <div className="visual-badge"><strong>R</strong><span>Seu tempo<br />tem valor</span></div>
         </div>
       </section>
@@ -113,11 +116,11 @@ export default function Home() {
             <a href="https://play.google.com/store/apps/details?id=renout.app" target="_blank" rel="noreferrer"><small>Disponível no</small><strong>Google Play</strong></a>
           </div>
         </div>
-        <div className="app-image"><img src="/images/corte-2.png" alt="Profissional do Renout Studio durante atendimento" /></div>
+        <div className="app-image"><img src={`${basePath}/images/corte-2.png`} alt="Profissional do Renout Studio durante atendimento" /></div>
       </section>
 
       <section className="visit section" id="contato">
-        <div className="visit-photo"><img src="/images/ambiente.png" alt="Ambiente do Renout Studio em Belo Horizonte" /></div>
+        <div className="visit-photo"><img src={`${basePath}/images/ambiente.png`} alt="Ambiente do Renout Studio em Belo Horizonte" /></div>
         <div className="visit-copy">
           <p className="eyebrow">Visite o studio</p>
           <h2>Um espaço reservado para o seu momento.</h2>
@@ -128,7 +131,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><img src="/images/logo-transparent.png" alt="Renout Studio" /><p>Cortes com precisão.<br />Estilo com identidade.</p></div>
+        <div className="footer-brand"><img src={`${basePath}/images/logo-transparent.png`} alt="Renout Studio" /><p>Cortes com precisão.<br />Estilo com identidade.</p></div>
         <div><small>Navegue</small><a href="#experiencia">Experiência</a><a href="#servicos">Serviços</a><a href="#avaliacoes">Avaliações</a></div>
         <div><small>Conecte-se</small><a href="https://www.instagram.com/renoutstudio/" target="_blank" rel="noreferrer">Instagram ↗</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp ↗</a></div>
         <div><small>Encontre</small><p>Av. Cristiano Machado, 1648<br />Sala 506 · Cidade Nova, BH</p></div>
